@@ -3,9 +3,16 @@
 Just an experiment to tsee if I can implement view rendering for
 [restify](http://restify.com/).
 
-## Installation
-
 ## Usage
+
+```js
+const restifyViews = require('restify-views');
+
+// assign res.render()
+app.use(restifyViews);
+
+// your middlewares here, any of them can now use res.render()
+```
 
 ## License
 
