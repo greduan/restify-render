@@ -1,4 +1,4 @@
-# restify-views
+# restify-render
 
 Just an experiment to tsee if I can implement view rendering for
 [restify](http://restify.com/).
@@ -6,7 +6,7 @@ Just an experiment to tsee if I can implement view rendering for
 ## Usage
 
 ```js
-const restifyViews = require('restify-views');
+const restifyRender = require('restify-render');
 
 // assign res.render()
 app.use(restifyViews);
