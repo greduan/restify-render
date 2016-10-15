@@ -1,20 +1,23 @@
 # restify-render
 
-Just an experiment to see if I can implement view rendering for
-[restify](http://restify.com/).
+Proof of concept for having template rendering in
+[Restify](http://restify.com), i.e. having interactive apps in Restify.
 
 ## Usage
 
 ```js
-const restifyRender = require('restify-render');
+const render = require('restify-render');
 
 // assign res.render()
-app.use(restifyRender({
+app.use(render({
   engine: 'pug',
   dir: __dirname + '/views',
 }));
 
-// your middlewares here, any of them can now use res.render()
+// basic use of res.render()
+server.get('/', function (req, res) {
+  res.render('view.pug', { name: 'Jason' });
+});
 ```
 
 ## License
