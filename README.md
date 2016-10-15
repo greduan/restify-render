@@ -9,7 +9,10 @@ Just an experiment to see if I can implement view rendering for
 const restifyRender = require('restify-render');
 
 // assign res.render()
-app.use(restifyRender({ engine: 'pug' }));
+app.use(restifyRender({
+  engine: 'pug',
+  dir: __dirname + '/views',
+}));
 
 // your middlewares here, any of them can now use res.render()
 ```
