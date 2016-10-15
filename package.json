@@ -11,5 +11,10 @@
   "license": "WTFPL",
   "peerDependencies": {
     "consolidate": "*"
+  },
+  "devDependencies": {
+    "consolidate": "^0.14.1",
+    "pug": "^2.0.0-beta6",
+    "restify": "^4.1.1"
   }
 }
