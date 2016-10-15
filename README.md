@@ -1,6 +1,6 @@
 # restify-render
 
-Just an experiment to tsee if I can implement view rendering for
+Just an experiment to see if I can implement view rendering for
 [restify](http://restify.com/).
 
 ## Usage
@@ -9,7 +9,7 @@ Just an experiment to tsee if I can implement view rendering for
 const restifyRender = require('restify-render');
 
 // assign res.render()
-app.use(restifyViews);
+app.use(restifyRender({ engine: 'pug' }));
 
 // your middlewares here, any of them can now use res.render()
 ```
