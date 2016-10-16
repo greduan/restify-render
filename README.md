@@ -5,18 +5,23 @@ Proof of concept for having template rendering in
 
 ## Usage
 
+For a full example you can take a look at `test/server.js`.
+
+Otherwise, here's a quick start:
+
 ```js
 const render = require('restify-render');
+const cons = require('consolidate');
 
 // assign res.render()
 app.use(render({
-  engine: 'pug',
+  engine: cons.pug,
   dir: __dirname + '/views',
 }));
 
 // basic use of res.render()
-server.get('/', function (req, res) {
-  res.render('view.pug', { name: 'Jason' });
+server.get('/:name', function (req, res) {
+  res.render('view.pug', { name: req.params.name || 'Jason' });
 });
 ```
 
